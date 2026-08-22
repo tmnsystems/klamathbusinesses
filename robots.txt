@@ -1,4 +1,4 @@
+# INDEXING GATE (Tina 2026-08-21): keep Disallow until 200 businesses have REAL PICTURES.
+# When the gate is met: change to "Allow: /" and re-add the Sitemap line.
 User-agent: *
-Allow: /
-
-Sitemap: https://klamathbusinesses.com/sitemap.xml
+Disallow: /
