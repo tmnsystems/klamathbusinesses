@@ -2,6 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // GitHub Pages SPA redirect: convert /about → /#/about is not needed
+      // because we use BrowserRouter. Instead, keep the path as-is so the
+      // SPA router picks it up. GitHub Pages serves this 404.html for any
+      // path without a matching file, but the HTML is identical to index.html,
+      // so the SPA loads and BrowserRouter renders the correct route.
+      // The 404 status is GitHub's default; the page renders correctly for users.
+      // For crawlers that execute JS (Google), the content is visible.
+    </script>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
