@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Retail sample page</title>
+<style>
+:root{
+  --navy:#1B3A5C; --amber:#D9A441; --terra:#C0563A; --sage:#7D9070; --cream:#FAF7F2;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--cream);color:var(--navy);line-height:1.6;}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px;}
+header{background:var(--amber);color:var(--navy);padding:28px 0;}
+.badge{display:inline-block;background:var(--navy);color:var(--cream);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:10px;}
+h1{font-size:30px;line-height:1.2;}
+.sub{margin-top:8px;color:#5C4616;font-size:16px;}
+main{padding:32px 0 24px;}
+section{background:#fff;border-radius:10px;padding:24px;margin-bottom:20px;box-shadow:0 1px 3px rgba(27,58,92,.10);}
+h2{font-size:21px;margin-bottom:14px;padding-bottom:8px;border-bottom:3px solid var(--amber);}
+.slot{border:2px dashed var(--sage);background:#F4F6F1;border-radius:8px;padding:12px 14px;margin-bottom:10px;color:#41553A;font-size:15px;}
+ul.clean{list-style:none;}
+ul.clean li{padding-left:22px;position:relative;margin-bottom:10px;}
+ul.clean li:before{content:"";position:absolute;left:0;top:7px;width:10px;height:10px;background:var(--amber);border-radius:2px;}
+.optional{border:3px solid var(--sage);}
+.optional .tag{display:inline-block;background:var(--sage);color:#fff;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:4px;margin-bottom:10px;}
+.callbar{background:var(--navy);border-radius:10px;padding:22px;text-align:center;margin-bottom:20px;}
+.callbtn{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-size:22px;font-weight:700;padding:16px 34px;border-radius:8px;}
+.callnote{color:#DDE5EE;margin-top:10px;font-size:14px;}
+footer{padding:24px 0 90px;text-align:center;font-size:14px;color:#5B6B7C;}
+.chat-btn{position:fixed;right:18px;bottom:18px;background:var(--navy);color:var(--cream);border:none;font-size:17px;font-weight:700;padding:14px 22px;border-radius:30px;cursor:pointer;box-shadow:0 3px 8px rgba(27,58,92,.25);}
+.chat-panel{position:fixed;right:18px;bottom:80px;width:320px;max-width:calc(100vw - 36px);background:#fff;border-radius:12px;box-shadow:0 6px 20px rgba(27,58,92,.30);overflow:hidden;}
+.chat-head{background:var(--navy);color:var(--cream);padding:12px 16px;font-weight:700;}
+.chat-body{padding:14px;max-height:340px;overflow-y:auto;}
+.msg{border-radius:10px;padding:8px 12px;margin-bottom:10px;font-size:14px;max-width:88%;}
+.msg.bot{background:#EDF1F5;color:var(--navy);}
+.msg.user{background:var(--amber);color:var(--navy);margin-left:auto;}
+.chat-note{font-size:12px;color:#7A8694;margin-top:4px;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="badge">Sample page</span>
+    <h1>[SHOP NAME]</h1>
+    <p class="sub">[ONE LINE: WHAT YOUR STORE IS KNOWN FOR]</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="callbar">
+    <a class="callbtn" href="tel:[PHONE NUMBER]">Call [PHONE NUMBER]</a>
+    <p class="callnote">Tap the button on a phone to call directly.</p>
+  </div>
+
+  <section>
+    <h2>Hours</h2>
+    <ul class="clean">
+      <li class="slot">Monday to Friday: [HOURS]</li>
+      <li class="slot">Saturday: [HOURS]</li>
+      <li class="slot">Sunday: [HOURS]</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where to find us</h2>
+    <ul class="clean">
+      <li class="slot">Address: [STREET ADDRESS, CITY, STATE]</li>
+      <li class="slot">Parking: [WHERE CUSTOMERS CAN PARK]</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What we carry</h2>
+    <ul class="clean">
+      <li class="slot">[CATEGORY 1: WHAT YOU STOCK AND WHO IT IS FOR]</li>
+      <li class="slot">[CATEGORY 2]</li>
+      <li class="slot">[CATEGORY 3]</li>
+      <li class="slot">[CATEGORY 4, if you want one]</li>
+    </ul>
+    <div class="slot">[OPTIONAL: a short note about special orders, new arrivals, or items loyal customers ask about]</div>
+  </section>
+
+  <section class="optional">
+    <span class="tag">Optional block</span>
+    <h2>Appointments and orders</h2>
+    <p class="slot">[SHORT LINE ABOUT WHAT THIS BLOCK DOES: BOOK APPOINTMENTS, TAKE ORDERS, OR NOTE WHAT IS IN STOCK]</p>
+    <ul class="clean">
+      <li class="slot">To book an appointment: [PHONE NUMBER OR EMAIL]</li>
+      <li class="slot">To place an order: [PHONE NUMBER OR EMAIL]</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>Sample built by Tina's Local Business Packages, Klamath Falls. Every bracket on this page is a slot for your real information. The green boxed section is optional and can be taken off any shop's page.</p>
+</footer>
+
+<button class="chat-btn" onclick="var p=document.getElementById('chatPanel');p.hidden=!p.hidden;">Chat</button>
+<div class="chat-panel" id="chatPanel" hidden>
+  <div class="chat-head">[SHOP NAME] helper</div>
+  <div class="chat-body">
+    <div class="msg bot">Hi. I am the sample chat helper. On your site, I answer questions using your own hours and product information.</div>
+    <div class="msg user">What do you carry?</div>
+    <div class="msg bot">[SAMPLE ANSWER: your product categories go here]</div>
+    <div class="msg user">Are you open Saturdays?</div>
+    <div class="msg bot">[SAMPLE ANSWER: your hours go here]</div>
+    <p class="chat-note">This chat is a sample. On your site, answers come from your real information.</p>
+  </div>
+</div>
+
+</body>
+</html>
